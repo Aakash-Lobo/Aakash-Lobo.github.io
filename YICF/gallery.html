@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Image Gallery With Cool Hover Effect</title>
+  <!-- Google Fonts Link -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="gallery.css" />
+</head>
+
+<body>
+
+  <header>
+    <a href="#" class="brand">Travel</a>
+    <div class="menu-btn"></div>
+    <div class="navigation">
+      <div class="navigation-items">
+        <a href="index.html">Home</a>
+        <a href="team.html">About</a>
+        <a href="#">Explore</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+  <br><br><br><br>
+  <div class="container">
+    <ul>
+      <li class="category active" data-filter="all">All</li>
+      <li class="category" data-filter="tech">Art</li>
+      <li class="category" data-filter="headphones">Craft</li>
+      <li class="category" data-filter="camera">Videos</li>
+    </ul>
+    <div class="gallery">
+      <div class="image tech"><img src="images/img-1.jpg" alt=""></div>
+      <div class="image headphones"><img src="images/img-2.jpg" alt=""></div>
+      <div class="image camera"><img src="images/img-3.jpg" alt=""></div>
+      <div class="image animals"><img src="images/img-4.jpg" alt=""></div>
+      <div class="image birds"><img src="images/img-5.jpg" alt=""></div>
+
+      <div class="image tech"><img src="images/img-6.jpg" alt=""></div>
+      <div class="image headphones"><img src="images/img-7.jpg" alt=""></div>
+      <div class="image camera"><img src="images/img-8.jpg" alt=""></div>
+      <div class="image animals"><img src="images/img-9.jpg" alt=""></div>
+      <div class="image birds"><img src="images/img-10.jpg" alt=""></div>
+
+      <div class="image tech"><img src="images/img-11.jpg" alt=""></div>
+      <div class="image headphones"><img src="images/img-12.jpg" alt=""></div>
+      <div class="image camera"><img src="images/img-1.jpg" alt=""></div>
+      <div class="image animals"><img src="images/img-2.jpg" alt=""></div>
+      <div class="image birds"><img src="images/img-3.jpg" alt=""></div>
+
+      <div class="image tech"><img src="images/img-4.jpg" alt=""></div>
+      <div class="image headphones"><img src="images/img-5.jpg" alt=""></div>
+      <div class="image tech"><img src="images/img-6.jpg" alt=""></div>
+    </div>
+  </div>
+
+
+  <!-- jquery cdn link -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script>
+
+    $(document).ready(function () {
+
+      $('.category').click(function () {
+
+        $(this).addClass('active').siblings().removeClass('active');
+
+        let filter = $(this).attr('data-filter');
+
+        if (filter == 'all') {
+          $('.image').show(500);
+        }
+        else {
+          $('.image').not('.' + filter).hide(400);
+          $('.image').filter('.' + filter).show(500);
+        }
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>
