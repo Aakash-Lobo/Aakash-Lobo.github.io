@@ -2134,14 +2134,7 @@
     var ssrInfo = { "renderBodyTime": 441, "renderTimeStamp": 1655490305604 }
   </script>
 
-<script>
-   // put isTable() here.
 
-   // change here 'the tablet condition'
-   if(isMobile()) {
-        window.navigate('index_tab.html');
-   } 
-</script>
 
 
   <script>window.clientSideRender = false;</script>
@@ -5223,6 +5216,11 @@
     id="wix-warmup-data">{"platform":{"ssrPropsUpdates":[],"ssrStyleUpdates":[]},"appsWarmupData":{}}</script>
   <!-- warmup data end -->
 
+  <script>
+    if ("ontouchstart" in document.documentElement) {
+      window.location.href = "https://aakash-lobo.github.io/Naiduhall/index_tab.html";
+    }
+  </script>
 
 
 
