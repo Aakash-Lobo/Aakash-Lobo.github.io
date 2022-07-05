@@ -1,0 +1,40 @@
+body {
+  background: url("image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: maroon;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: orange;
+}
+
+footer {
+  text-align: center;
+}
+
+.lyd:hover {
+  background-color: red;
+}
+
+.roy:hover {
+  background-color: brown;
+}
+
+.aaron:hover {
+  background-color: blue;
+}
+
+.sub:hover {
+  background-color: green;
+}
